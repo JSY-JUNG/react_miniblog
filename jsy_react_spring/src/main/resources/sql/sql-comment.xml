@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bitc.fullstack503.jsy_react_spring.mapper.CommentMapper">
+    <select id="findByPostId" resultType="bitc.fullstack503.jsy_react_spring.dto.commentDTO" parameterType="int">
+        SELECT
+            *
+        FROM
+            comment
+        WHERE
+            post_id = #{postIdx}
+        ORDER BY comment_idx
+    </select>
+
+    <insert id="savecomment" parameterType="bitc.fullstack503.jsy_react_spring.dto.commentDTO">
+        INSERT INTO comment
+            (post_id, text)
+        VALUES
+            (#{postId}, #{text})
+    </insert>
+
+</mapper>

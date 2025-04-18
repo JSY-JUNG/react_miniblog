@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <style>
+
+      /* index.css 또는 App.css 등에 추가 */
+      .post-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 10px;
+      }
+
+      .post-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .post-card .card-title {
+        font-size: 1.2rem;
+      }
+
+      .post-card .card-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .notion-title {
+        font-size: 2rem;
+        font-weight: 600;
+        border: none;
+        border-bottom: 2px solid #ddd;
+        border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .notion-title:focus {
+        outline: none;
+        border-bottom: 2px solid #000;
+        background: transparent;
+      }
+
+      .notion-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        border: none;
+        resize: none;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .notion-content:focus {
+        outline: none;
+        background: transparent;
+      }
+
+      .editor-wrapper {
+        transition: all 0.2s ease-in-out;
+      }
+
+      .editor-wrapper:focus-within {
+        box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.05);
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

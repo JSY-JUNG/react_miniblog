@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bitc.fullstack503.jsy_react_spring.mapper.PostMapper">
+
+    <select id="findAll" resultType="bitc.fullstack503.jsy_react_spring.dto.postDTO">
+        SELECT
+            *
+        FROM
+            post
+        ORDER BY
+            post_idx
+        DESC
+    </select>
+
+    <select id="findById" resultType="bitc.fullstack503.jsy_react_spring.dto.postDTO" parameterType="int">
+        SELECT
+            *
+        FROM
+            post
+        WHERE
+            post_idx = #{postIdx}
+    </select>
+
+    <insert id="save" parameterType="bitc.fullstack503.jsy_react_spring.dto.postDTO">
+        INSERT INTO post
+            (title, content)
+        VALUES
+            (#{title}, #{content})
+    </insert>
+
+</mapper>

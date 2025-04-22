@@ -29,4 +29,14 @@ public class PostServiceImpl implements PostService {
     public void save(postDTO post) throws Exception {
         postMapper.save(post);
     }
+
+    @Override
+    public void deleteById(int postIdx) throws Exception {
+        postMapper.deleteById(postIdx);
+    }
+
+    @Override
+    public void update(postDTO post) throws Exception {
+        postMapper.update(post);
+    }
 }

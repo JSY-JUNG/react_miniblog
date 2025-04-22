@@ -30,4 +30,18 @@
             (#{title}, #{content})
     </insert>
 
+    <delete id="deleteById" parameterType="int">
+        DELETE FROM post
+        WHERE post_idx = #{postIdx}
+    </delete>
+
+    <update id="update" parameterType="bitc.fullstack503.jsy_react_spring.dto.postDTO">
+        UPDATE
+            post
+        SET
+            title = #{title}, content = #{content}
+        WHERE
+            post_idx = #{postIdx}
+    </update>
+
 </mapper>

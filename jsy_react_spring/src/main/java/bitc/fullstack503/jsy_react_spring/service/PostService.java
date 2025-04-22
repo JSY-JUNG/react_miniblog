@@ -10,4 +10,8 @@ public interface PostService {
     postDTO findById(int postIdx) throws Exception;
 
     void save(postDTO post) throws Exception;
+
+    void deleteById(int postIdx) throws Exception;
+
+    void update(postDTO post) throws Exception;
 }

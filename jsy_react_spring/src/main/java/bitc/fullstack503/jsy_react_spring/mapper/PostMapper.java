@@ -12,4 +12,8 @@ public interface PostMapper {
     postDTO findById(int id) throws Exception;
 
     void save(postDTO post) throws Exception;
+
+    void deleteById(int postIdx) throws Exception;
+
+    void update(postDTO post) throws Exception;
 }

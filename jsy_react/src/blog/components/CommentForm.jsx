@@ -17,18 +17,29 @@ function CommentForm({postIdx,onAdd}) {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit} className={'mb-3'}>
-                <input type="text"
-                       className={'form-control'}
-                       placeholder={'Write a comment...'}
-                       value={text}
-                       onChange={handleChange}
-                       required={true}
-                />
-                <button type={'submit'} className={'btn btn-primary mt-2'}>Add Comment</button>
-            </form>
+        <div className="mt-5">
+            <div className="card border-0 shadow-sm">
+                <div className="card-body">
+                    <form onSubmit={handleSubmit}>
+                        <div className="mb-3">
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="당신의 생각을 남겨주세요..."
+                        value={text}
+                        onChange={handleChange}
+                        required
+                     />
+                        </div>
+                        <button type="submit" className="btn btn-primary float-end">
+                            등록하기
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
+
+
     );
 }
 

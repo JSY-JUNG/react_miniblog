@@ -31,4 +31,15 @@ public class PostController {
         postService.save(post);
     }
 
+    @DeleteMapping("/{postIdx}/delete")
+    public void delete(@PathVariable int postIdx) throws Exception{
+        postService.deleteById(postIdx);
+    }
+
+    @PutMapping("/{postIdx}/update")
+    public void update(@RequestBody postDTO post) throws Exception{
+        System.out.println(post);
+        postService.update(post);
+    }
+
 }
